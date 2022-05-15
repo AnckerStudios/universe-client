@@ -1,7 +1,29 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Outfit:wght@900&display=swap');
+html {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
 }
-
+.big-text
+{
+  font-family: 'Outfit', sans-serif;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  display: inline-block;
+}
+.name-title
+{
+  display: inline-block;
+}
+.thin-text
+{
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(255, 255, 255);
+ 
+  text-decoration: none;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +57,194 @@
   to {
     transform: rotate(360deg);
   }
+}
+.space
+{
+    position: absolute;
+    margin: 0%;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+.planetSystem
+{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.planetSystem .centralObj
+{   
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: orange;
+    box-shadow: 0 0 10px orange, 0 0 50px orange;
+}
+.ring
+{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    /*border: 2px solid rgb(255, 94, 0);*/
+    
+}
+.sat
+{
+    position: absolute;
+    border-radius: 50%;
+}
+.ball
+{
+    border-radius: 50%;
+}
+.rhomb
+{ 
+    
+    transform: rotate(45deg);
+}
+.conteiner
+{
+  position: absolute;
+  margin: 0%;
+  height: 100%;
+  width: 100%;
+}
+.uni
+{
+  position: absolute;
+  margin: 0%;
+  height: 100%;
+  width: 100%;
+  color: blue;
+}
+@keyframes animate 
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+.modal
+{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal__content
+{
+  padding: 10px;
+  background-color: #1a1e21;
+  height: 800px;
+  width: 800px;
+
+
+}
+.group        { 
+  position:relative; 
+  margin-bottom:45px; 
+  color: black;
+}
+input         {
+  font-family: 'Montserrat', sans-serif;
+  font-size:18px;
+  padding:10px 00px 10px 0px;
+  display:block;
+  width:100%;
+  border:none;
+  color: white;
+  border-bottom:1px solid #757575;
+  background-color: transparent;
+}
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input:focus     { outline:none; }
+
+/* LABEL ======================================= */
+.label  {
+  font-family: 'Montserrat', sans-serif;
+  color:rgb(255, 255, 255); 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ .label, input:valid ~ .label    {
+  top:-20px;
+  font-size:14px;
+  color:#1cdd5c;
+}
+
+/* BOTTOM BARS ================================= */
+.bar  { 
+  position:relative; 
+  display:block; 
+  width:100%; 
+}
+.bar:before, .bar:after   {
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#1cdd5c; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:100%;
+}
+
+.buttom
+{
+  font-family: 'Outfit', sans-serif;
+  position: relative;
+  border-radius: 5px;
+  width: 100%;
+  height: 43px;
+  background-color: rgb(255,255,255);
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  bottom: 0;
+  text-align: center;
+}
+.buttom:hover
+{
+  background-color: #1cdd5c;
+}
+/* HIGHLIGHTER ================================== */
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from { background:#1cdd5c; }
+  to  { width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+  from { background:#1cdd5c; }
+  to  { width:0; background:transparent; }
 }
